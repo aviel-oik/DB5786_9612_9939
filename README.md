@@ -18,6 +18,6 @@ The main objective of this part of the project is to provide a clean, realistic,
 
 ## ERD and DSD Diagrams
 
-![ERD Diagram](./images/ERD.png)
+![ERD Diagram](image\DSD.png)
 
-![DSD Diagram](./images/DSD.png)
+![DSD Diagram](image\ERD.png)
