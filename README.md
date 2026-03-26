@@ -368,10 +368,7 @@ The following screenshots present the execution of the backup process and the re
 ![Restore Screenshot 1](image/restore1.png)
 
 ![Restore Screenshot 2](image/restore2.png)
-
-  
-    
-      
+ 
  <br>
  <br>
  <br>
@@ -383,6 +380,8 @@ The following screenshots present the execution of the backup process and the re
 # Phase 2
 
 ## SELECT Queries
+
+<br>
 
 ### שאילתה 1: דו"ח עומס טיסות לפי שדה תעופה (מאי 2024)
 
@@ -404,7 +403,7 @@ The following screenshots present the execution of the backup process and the re
 
 ---
 
-
+<br>
 
 ### שאילתה 2: איתור שדות תעופה "אסטרטגיים" באזור מסוים
 
@@ -432,7 +431,7 @@ The following screenshots present the execution of the backup process and the re
 
 ---
 
-
+<br>
 
 ### שאילתה 3: דוח טיסות "איירבוס" ממדינות ספציפיות
 
@@ -460,7 +459,7 @@ The following screenshots present the execution of the backup process and the re
 
 ---
 
-
+<br>
 
 ### שאילתה 4: זיהוי דגמי מטוסים ייחודיים הפועלים במדינה מסוימת
 
@@ -487,6 +486,7 @@ The following screenshots present the execution of the backup process and the re
 
 ---
 
+<br>
 
 ### שאילתה 5: ניתוח סטטיסטי של עיכובים לפי חודש ואזור גיאוגרפי
 
@@ -501,6 +501,7 @@ The following screenshots present the execution of the backup process and the re
 
 ---
 
+<br>
 
 ### שאילתה 6: ניתוח עומס נוסעים יומי בטרמינלים לפי ימי השבוע
 
@@ -513,6 +514,7 @@ The following screenshots present the execution of the backup process and the re
 
 ---
 
+<br>
 
 ### שאילתה 7: פילוח טיסות לפי "משמרות" (בוקר/צהריים/לילה)
 
@@ -527,6 +529,7 @@ The following screenshots present the execution of the backup process and the re
 
 ---
 
+<br>
 
 ### שאילתה 8: ניתוח "נזק נוסעים" לפי מדינה בעקבות עיכובים
 
