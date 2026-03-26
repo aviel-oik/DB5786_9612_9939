@@ -379,6 +379,8 @@ The following screenshots present the execution of the backup process and the re
  
 # Phase 2
 
+<br>
+
 ## SELECT Queries
 
 <br>
