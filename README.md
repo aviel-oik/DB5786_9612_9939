@@ -673,3 +673,34 @@ The following screenshots present the execution of the backup process and the re
 ![Query 1a Screenshot](image/c3bis.png)
 
 <br>
+<br>
+<br>
+
+## Roolback
+<br>
+
+### 5 row changed
+
+![Query 1a Screenshot](image/r1.png)
+
+### no changement 
+
+![Query 1a Screenshot](image/r1bis.png)
+
+<br>
+<br>
+
+## Commit
+<br>
+
+### befor
+
+![Query 1a Screenshot](image/co1.png)
+
+### after 
+
+![Query 1a Screenshot](image/co1bis.png)
+
+### 5 row changed
+
+![Query 1a Screenshot](image/co1bisbis.png)
