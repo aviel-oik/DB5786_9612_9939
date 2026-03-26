@@ -18,6 +18,6 @@ The main objective of this part of the project is to provide a clean, realistic,
 
 ## ERD and DSD Diagrams
 
-![ERD Diagram](image\DSD.png)
+![ERD Diagram](C:\Users\aviel\Desktop\minip-db\DB5786_9612_9939\image\DSD.png)
 
-![DSD Diagram](image\ERD.png)
+![DSD Diagram](image/ERD.png)
