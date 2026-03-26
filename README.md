@@ -331,16 +331,14 @@ if __name__ == "__main__":
     generate_data()
 ```
 
-![Method 1 - Image 1](image/Screenshot 2026-03-26 041412.png)
+![Method 1 - Image 1](image/python.png)
 
 ### Method 2 – Generated CSV Files from Mockaroo / GenerateData
 
-![Method 2 - Image 1](./images/method2-image1.png)
+![Method 2 - Image 1](image/Aircraft-Mockaroo.png)
 
-![Method 2 - Image 2](./images/method2-image2.png)
+![Method 2 - Image 2](image/mocharoo-code.png)
 
 ### Method 3 – AI-Generated Insert Statements
 
-![Method 3 - Image 1](./images/method3-image1.png)
-
-![Method 3 - Image 2](./images/method3-image2.png)
+![Method 3 - Image 1](image/insert.png)
