@@ -69,7 +69,7 @@ The **FLIGHT** entity represents an individual scheduled flight operated by the 
 
 **Attributes:**
 - `flight_id`: The unique identifier of the flight. It is the primary key of the entity.
-- `flight_number`: A unique code used to identify the flight in the airline system.
+- `flight_number`: A code used to identify the flight in the airline system.
 - `departure_time`: The scheduled departure date and time of the flight.
 - `arrival_time`: The scheduled arrival date and time of the flight.
 - `status`: The current status of the flight, such as scheduled, delayed, boarding, departed, or cancelled.
@@ -338,7 +338,7 @@ if __name__ == "__main__":
 
 ![Method 1 - Image 1](image/python.png)
 
-### Method 2 – Generated CSV Files from Mockaroo / GenerateData
+### Method 2 – Generated SQL Files from Mockaroo / GenerateData
 
 ![Method 2 - Image 1](image/Aircraft-Mockaroo.png)
 
