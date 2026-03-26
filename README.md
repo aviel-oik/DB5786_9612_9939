@@ -372,19 +372,14 @@ The following screenshots present the execution of the backup process and the re
   
     
       
-        
-          
-            
-              
-                
-                  
-                    
-                      
-                        
-                          
-                            
-
-
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ 
 # Phase 2
 
 ## SELECT Queries
