@@ -208,7 +208,6 @@ In addition to foreign keys, the DSD also shows other important database-level d
   Some attributes must contain unique values across the table.  
   In this diagram:
   - `AIRPORT.iata_code` is unique, so each airport has a different international code.
-  - `FLIGHT.flight_number` is unique, so each flight has a distinct identifier.
 
 - **Relational Structure:**  
   The DSD shows the table-to-table implementation of the system:
@@ -542,5 +541,93 @@ The following screenshots present the execution of the backup process and the re
 #### Screenshot 
 
 ![Query 1a Screenshot](image/8.png)
+
+---
+
+<br>
+<br>
+<br>
+
+### טרמינלים קטנים וישנים (Gates)  מחיקה 1: מחיקת שערים 
+
+
+**הסיפור:**  
+במסגרת תוכנית התייעלות, הוחלט לסגור ולמחוק מהמערכת שערים (Gates) שנמצאים בסטטוס 'Maintenance' בתוך טרמינלים קטנים (כאלו שהקיבולת שלהם נמוכה מ-5,500 נוסעים). השערים הללו נחשבים לישנים מדי לשיפוץ.
+
+#### Screenshot 
+
+![Query 1a Screenshot](image/m1.png)
+![Query 1a Screenshot](image/m1bis.png)
+---
+<br>
+
+### מחיקה 2: הוצאה מהשירות של מטוסים קטנים (צמצום צי)
+
+
+**הסיפור:**  
+חברת התעופה החליטה להוציא מהשירות את כל המטוסים מהדגם הקטן ביותר שלה (Embraer E195-E2) כדי לחסוך בעלויות דלק ותחזוקה. כתוצאה מכך, יש למחוק מהמערכת את כל הטיסות שמשובצות למטוסים אלו.
+
+#### Screenshot 
+
+![Query 1a Screenshot](image/m2.png)
+![Query 1a Screenshot](image/m2bis.png)
+
+---
+<br>
+
+### מחיקה 3: ביטול טיסות "בזמן" באזור בסיכון בטחוני
+
+
+**הסיפור:**  
+עקב התרעה בטחונית חמורה באזור גיאוגרפי מסוים ('Region 1'), הוחלט לבטל את כל הטיסות שטרם יצאו (כאלו שמוגדרות בסטטוס 'On Time') ויוצאות משדות תעופה באזור זה. טיסות שכבר עוכבו (Delayed) נשארות לטיפול פרטני.
+
+#### Screenshot 
+
+![Query 1a Screenshot](image/m3.png)
+
+---
+
+<br>
+
+### עדכון 1: עדכון קיבולת מטוסים עקב רגולציה במדינות ספציפיות
+
+
+
+**הסיפור:**  
+עקב תקנות בטיחות חדשות ב-'Country 1', הוחלט שכל המטוסים שיוצאים משדות התעופה במדינה זו חייבים להקטין את קיבולת הנוסעים המקסימלית שלהם ב-10% (כדי לאפשר נשיאת דלק רב יותר). העדכון מתבצע בטבלת המטוסים עבור כל מטוס שכרגע משובץ לטיסה שיוצאת ממדינה זו.
+
+#### Screenshot 
+
+![Query 1a Screenshot](image/u1.png)
+
+---
+
+<br>
+
+### עדכון 2: עדכון סטטוס וזמנים עקב שביתת עובדים אזורית
+
+
+
+**הסיפור:**  
+שביתת פתע של צוותי קרקע ב-'Region 5' גרמה לעיכובים כבדים. כל הטיסות שטרם המריאו (סטטוס 'On Time') ויוצאות משדות תעופה באזור זה, צריכות להתעדכן לסטטוס 'Delayed'. בנוסף, זמן הנחיתה המשוער שלהן נדחה ב-3 שעות קדימה מהזמן המקורי.
+
+#### Screenshot 
+
+![Query 1a Screenshot](image/u2.png)
+
+---
+
+<br>
+
+### עדכון 3: שדרוג מערכות טכנולוגי בטרמינלים נבחרים
+
+
+
+**הסיפור:**  
+הנהלת נמל התעופה החליטה לבצע שדרוג טכנולוגי בכל הטרמינלים ששמם הוא 'Terminal C'. במהלך השדרוג, כל השערים (Gates) בטרמינלים אלו שכרגע פתוחים לשירות ('Open'), חייבים לעבור לסטטוס 'Maintenance' כדי שלא ישובצו אליהם טיסות חדשות בזמן העבודות.
+
+#### Screenshot 
+
+![Query 1a Screenshot](image/u3.png)
 
 ---

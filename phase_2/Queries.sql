@@ -268,3 +268,132 @@ WHERE f.status = 'Delayed'
 GROUP BY a.country
 HAVING COUNT(f.flight_id) > 5 -- Only showing countries with significant delay issues
 ORDER BY total_impacted_seats DESC;
+
+
+
+
+-- -----------------------------------------------------
+--      Querie DELETE 1
+-- -----------------------------------------------------
+
+
+-- Delete Query 1: Infrastructure Consolidation
+-- Deleting maintenance gates in low-capacity terminals
+DELETE FROM GATE
+WHERE status = 'Maintenance'
+AND terminal_id IN (
+    -- Subquery: Find IDs of terminals with capacity below 5500
+    SELECT terminal_id 
+    FROM TERMINAL 
+    WHERE capacity < 5500
+);
+
+
+
+
+-- -----------------------------------------------------
+--      Querie DELETE 2
+-- -----------------------------------------------------
+
+
+-- Delete Query 2: Fleet Modernization
+-- Deleting flights assigned to small Embraer aircraft (Capacity 120)
+DELETE FROM FLIGHT
+WHERE aircraft_id IN (
+    -- Subquery: Find IDs of all Embraer aircraft based on their fixed capacity
+    SELECT aircraft_id 
+    FROM AIRCRAFT 
+    WHERE capacity = 120 
+    AND manufacturer = 'Embraer'
+);
+
+
+
+
+-- -----------------------------------------------------
+--      Querie DELETE 3
+-- -----------------------------------------------------
+
+
+-- Delete Query 3: Security Lockdown
+-- Deleting scheduled 'On Time' flights departing from Region 1
+DELETE FROM FLIGHT
+WHERE status = 'On Time'
+AND route_id IN (
+    -- Subquery: Find routes starting from any airport in Region 1
+    SELECT route_id 
+    FROM ROUTE 
+    WHERE origin_airport_id IN (
+        SELECT airport_id 
+        FROM AIRPORT 
+        WHERE region = 'Region 1'
+    )
+);
+
+
+
+
+
+-- -----------------------------------------------------
+--      Querie UPDATE 1
+-- -----------------------------------------------------
+
+
+-- Update Query 1: Safety Regulation Capacity Adjustment
+-- Updates aircraft capacity based on departure country
+UPDATE AIRCRAFT
+SET capacity = ROUND(capacity * 0.9)
+WHERE aircraft_id IN (
+    -- Subquery: Find all aircraft IDs that are currently assigned to flights
+    -- departing from airports in 'Country 1'
+    SELECT f.aircraft_id
+    FROM FLIGHT f
+    JOIN ROUTE r ON f.route_id = r.route_id
+    JOIN AIRPORT a ON r.origin_airport_id = a.airport_id
+    WHERE a.country = 'Country 1'
+);
+
+
+
+
+-- -----------------------------------------------------
+--      Querie UPDATE 2
+-- -----------------------------------------------------
+
+
+-- Update Query 2: Regional Strike Impact
+-- Mass update of flight status and arrival times in a specific region
+UPDATE FLIGHT
+SET status = 'Delayed',
+    arrival_time = arrival_time + INTERVAL '3 hours'
+WHERE status = 'On Time'
+AND route_id IN (
+    -- Subquery: Find routes starting from airports in Region 5
+    SELECT route_id 
+    FROM ROUTE 
+    WHERE origin_airport_id IN (
+        SELECT airport_id 
+        FROM AIRPORT 
+        WHERE region = 'Region 5'
+    )
+);
+
+
+
+
+-- -----------------------------------------------------
+--      Querie UPDATE 3
+-- -----------------------------------------------------
+
+
+-- Update Query 3: Terminal Software Upgrade
+-- Closing all open gates for maintenance in specific named terminals
+UPDATE GATE
+SET status = 'Maintenance'
+WHERE status = 'Open'
+AND terminal_id IN (
+    -- Subquery: Find IDs of all terminals named 'Terminal C'
+    SELECT terminal_id 
+    FROM TERMINAL 
+    WHERE terminal_name = 'Terminal C'
+);
