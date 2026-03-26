@@ -355,13 +355,19 @@ As part of the database project, a backup and restore procedure was also perform
 
 The backup process creates a copy of the current database state, including its structure and stored data. The restore process uses that backup file to rebuild the database and recover the saved content. Together, these actions help ensure reliability, prevent accidental data loss, and support database maintenance.
 
-
+The following screenshots present the execution of the backup process and the restoration of the database.
 
 ### Data Backup
 
 ![Backup Screenshot 1](image/backup1.png)
 
 ![Backup Screenshot 2](image/backup2.png)
+
+### Data Restore
+
+![Restore Screenshot 1](image/restore1.png)
+
+![Restore Screenshot 2](image/restore2.png)
 
 
 
