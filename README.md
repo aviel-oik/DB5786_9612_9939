@@ -12,7 +12,12 @@ This project is divided into several functional divisions, with each division re
 
 The Flight Operations Division includes the entities needed to describe how flights are operated within the system. It covers airports and the routes connecting them, the aircraft used to operate flights, and the airport infrastructure that supports passenger movement through terminals and gates. In this division, each flight is associated with a route and an aircraft, while airports are connected to terminals and terminals are connected to gates.
 
-The main objective of this part of the project is to provide a clean, realistic, and normalized schema for flight operations. This division serves as a foundation for storing operational airline data and supports future tasks such as data insertion, querying, reporting, and integration with the other parts of the Airline Management System.   
+The main objective of this part of the project is to provide a clean, realistic, and normalized schema for flight operations. This division serves as a foundation for storing operational airline data and supports future tasks such as data insertion, querying, reporting, and integration with the other parts of the Airline Management System. 
+
+## Table of Contents
+
+- [Phase 1](#phase-1)
+- [Phase 2](#phase-2)
 
 # Phase 1
 
@@ -342,3 +347,23 @@ if __name__ == "__main__":
 ### Method 3 – AI-Generated Insert Statements
 
 ![Method 3 - Image 1](image/insert.png)
+
+
+## Backup and Restore
+
+As part of the database project, a backup and restore procedure was also performed in order to demonstrate data preservation and recovery. This step is important because it shows that the database can be saved safely and restored when needed, which is a fundamental aspect of database management.
+
+The backup process creates a copy of the current database state, including its structure and stored data. The restore process uses that backup file to rebuild the database and recover the saved content. Together, these actions help ensure reliability, prevent accidental data loss, and support database maintenance.
+
+
+
+### Data Backup
+
+![Backup Screenshot 1](image/backup1.png)
+
+![Backup Screenshot 2](image/backup2.png)
+
+
+
+
+# Phase 2
