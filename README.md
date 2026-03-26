@@ -546,9 +546,11 @@ The following screenshots present the execution of the backup process and the re
 
 <br>
 <br>
+
+## DELETE Queries
 <br>
 
-### טרמינלים קטנים וישנים (Gates)  מחיקה 1: מחיקת שערים 
+### טרמינלים קטנים וישנים מחיקה 1: מחיקת שערים 
 
 
 **הסיפור:**  
@@ -587,6 +589,10 @@ The following screenshots present the execution of the backup process and the re
 
 ---
 
+<br>
+<br>
+
+## UPDATE Queries
 <br>
 
 ### עדכון 1: עדכון קיבולת מטוסים עקב רגולציה במדינות ספציפיות
@@ -631,3 +637,39 @@ The following screenshots present the execution of the backup process and the re
 ![Query 1a Screenshot](image/u3.png)
 
 ---
+
+<br>
+<br>
+
+## Constraint
+<br>
+
+### constraint 1
+
+![Query 1a Screenshot](image/c1.png)
+
+### insert error 1
+
+![Query 1a Screenshot](image/c1bis.png)
+
+<br>
+
+### constraint 2
+
+![Query 1a Screenshot](image/c2.png)
+
+### insert error 2
+
+![Query 1a Screenshot](image/c2bis.png)
+
+<br>
+
+### constraint 3
+
+![Query 1a Screenshot](image/c3.png)
+
+### insert error 3
+
+![Query 1a Screenshot](image/c3bis.png)
+
+<br>
