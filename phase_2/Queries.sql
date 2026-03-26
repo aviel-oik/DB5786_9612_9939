@@ -2,32 +2,32 @@
 --      Querie 1
 -- -----------------------------------------------------
 
--- Method A: Using JOIN and GROUP BY
--- Efficiency: High. PostgreSQL optimizes joins using Hash Joins or Merge Joins.
-SELECT 
-    a.name AS airport_name, 
-    a.city, 
-    EXTRACT(MONTH FROM f.departure_time) AS flight_month,
-    COUNT(f.flight_id) AS total_departures
+-- Method A: 
+SELECT a.airport_id, 
+       a.name, 
+       COUNT(f.flight_id) AS total_flights
 FROM AIRPORT a
 JOIN ROUTE r ON a.airport_id = r.origin_airport_id
 JOIN FLIGHT f ON r.route_id = f.route_id
-WHERE EXTRACT(YEAR FROM f.departure_time) = 2024
-GROUP BY a.airport_id, a.name, a.city, flight_month
-ORDER BY total_departures DESC;
+WHERE EXTRACT(MONTH FROM f.departure_time) = 5 
+  AND EXTRACT(YEAR FROM f.departure_time) = 2024
+GROUP BY a.airport_id, a.name
+ORDER BY total_flights DESC;
 
--- Method B: Correlated Subquery in SELECT (just for mai)
--- Efficiency: Lower. Executes the subquery for every single row in the AIRPORT table.
-SELECT 
-    a.name, 
-    (SELECT COUNT(*) 
-     FROM FLIGHT f 
-     JOIN ROUTE r ON f.route_id = r.route_id 
-     WHERE r.origin_airport_id = a.airport_id 
-     AND EXTRACT(MONTH FROM f.departure_time) = 5) AS may_flights
+-- Method B: 
+SELECT a.airport_id, 
+       a.name, 
+       sub.flight_count AS total_flights
 FROM AIRPORT a
-ORDER BY may_flights DESC;
-
+JOIN (
+    SELECT r.origin_airport_id, COUNT(*) AS flight_count
+    FROM FLIGHT f
+    JOIN ROUTE r ON f.route_id = r.route_id
+    WHERE EXTRACT(MONTH FROM f.departure_time) = 5
+      AND EXTRACT(YEAR FROM f.departure_time) = 2024
+    GROUP BY r.origin_airport_id
+) sub ON a.airport_id = sub.origin_airport_id
+ORDER BY total_flights DESC;
 
 
 -- -----------------------------------------------------
