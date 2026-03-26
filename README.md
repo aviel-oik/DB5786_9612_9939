@@ -12,4 +12,12 @@ This project is divided into several functional divisions, with each division re
 
 The Flight Operations Division includes the entities needed to describe how flights are operated within the system. It covers airports and the routes connecting them, the aircraft used to operate flights, and the airport infrastructure that supports passenger movement through terminals and gates. In this division, each flight is associated with a route and an aircraft, while airports are connected to terminals and terminals are connected to gates.
 
-The main objective of this part of the project is to provide a clean, realistic, and normalized schema for flight operations. This division serves as a foundation for storing operational airline data and supports future tasks such as data insertion, querying, reporting, and integration with the other parts of the Airline Management System.
+The main objective of this part of the project is to provide a clean, realistic, and normalized schema for flight operations. This division serves as a foundation for storing operational airline data and supports future tasks such as data insertion, querying, reporting, and integration with the other parts of the Airline Management System.   
+
+# Phase 1
+
+## ERD and DSD Diagrams
+
+![ERD Diagram](./images/ERD.png)
+
+![DSD Diagram](./images/DSD.png)
