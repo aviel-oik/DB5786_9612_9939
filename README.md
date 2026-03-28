@@ -704,3 +704,11 @@ The following screenshots present the execution of the backup process and the re
 ### 5 row changed
 
 ![Query 1a Screenshot](image/co1bisbis.png)
+
+<br> 
+
+## Data Backup
+
+![Backup Screenshot 1](image/backup2-1.png)
+
+![Backup Screenshot 2](image/backup2-2.png)
